@@ -1,0 +1,16 @@
+<annotation>
+<filename>
+insidecity_a129053.jpg
+</filename>
+<folder>
+spatial_envelope_256x256_static_8outdoorcategories
+</folder>
+<source>
+<sourceImage>
+Aude Oliva and Antonio Torralba, IJCV 2001, vol 42(3).
+</sourceImage>
+<sourceAnnotation>
+LabelMe Webtool
+</sourceAnnotation>
+</source>
+<object><name>door</name><deleted>0</deleted><verified>0</verified><date>25-Feb-2006 05:39:33</date><polygon><username>anonymous</username><pt><x>116</x><y>107</y></pt><pt><x>179</x><y>107</y></pt><pt><x>181</x><y>213</y></pt><pt><x>117</x><y>214</y></pt></polygon></object><object><name>building</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:11</date><polygon><username>anonymous</username><pt><x>0</x><y>232</y></pt><pt><x>101</x><y>229</y></pt><pt><x>102</x><y>237</y></pt><pt><x>198</x><y>235</y></pt><pt><x>198</x><y>229</y></pt><pt><x>255</x><y>226</y></pt><pt><x>256</x><y>0</y></pt><pt><x>0</x><y>0</y></pt></polygon></object><object><name>sidewalk</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:11</date><polygon><username>anonymous</username><pt><x>0</x><y>256</y></pt><pt><x>255</x><y>256</y></pt><pt><x>255</x><y>227</y></pt><pt><x>201</x><y>229</y></pt><pt><x>200</x><y>233</y></pt><pt><x>104</x><y>239</y></pt><pt><x>102</x><y>232</y></pt><pt><x>0</x><y>233</y></pt></polygon></object><object><name>steps</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:11</date><polygon><username>anonymous</username><pt><x>105</x><y>214</y></pt><pt><x>103</x><y>216</y></pt><pt><x>104</x><y>225</y></pt><pt><x>103</x><y>229</y></pt><pt><x>101</x><y>239</y></pt><pt><x>199</x><y>235</y></pt><pt><x>199</x><y>231</y></pt><pt><x>195</x><y>225</y></pt><pt><x>195</x><y>215</y></pt><pt><x>193</x><y>213</y></pt></polygon></object><object><name>window</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:11</date><polygon><username>anonymous</username><pt><x>31</x><y>76</y></pt><pt><x>30</x><y>152</y></pt><pt><x>76</x><y>150</y></pt><pt><x>76</x><y>75</y></pt></polygon></object></annotation>

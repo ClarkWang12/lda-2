@@ -1,0 +1,16 @@
+<annotation>
+<filename>
+coast_bea29.jpg
+</filename>
+<folder>
+spatial_envelope_256x256_static_8outdoorcategories
+</folder>
+<source>
+<sourceImage>
+Aude Oliva and Antonio Torralba, IJCV 2001, vol 42(3).
+</sourceImage>
+<sourceAnnotation>
+LabelMe Webtool
+</sourceAnnotation>
+</source>
+<object><name>boat</name><deleted>0</deleted><verified>0</verified><date>04-Mar-2006 06:43:21</date><polygon><username>anonymous</username><pt><x>49</x><y>87</y></pt><pt><x>40</x><y>115</y></pt><pt><x>31</x><y>117</y></pt><pt><x>30</x><y>121</y></pt><pt><x>60</x><y>121</y></pt><pt><x>61</x><y>118</y></pt><pt><x>54</x><y>101</y></pt><pt><x>49</x><y>84</y></pt></polygon></object><object><name>sky</name><deleted>0</deleted><verified>0</verified><date>04-Mar-2006 06:43:21</date><polygon><username>anonymous</username><pt><x>0</x><y>109</y></pt><pt><x>256</x><y>107</y></pt><pt><x>256</x><y>0</y></pt><pt><x>0</x><y>0</y></pt></polygon></object><object><name>sand</name><deleted>0</deleted><verified>0</verified><date>04-Mar-2006 06:43:21</date><polygon><username>anonymous</username><pt><x>0</x><y>199</y></pt><pt><x>39</x><y>196</y></pt><pt><x>82</x><y>196</y></pt><pt><x>147</x><y>194</y></pt><pt><x>176</x><y>194</y></pt><pt><x>213</x><y>194</y></pt><pt><x>226</x><y>196</y></pt><pt><x>245</x><y>194</y></pt><pt><x>252</x><y>191</y></pt><pt><x>256</x><y>191</y></pt><pt><x>255</x><y>255</y></pt><pt><x>0</x><y>255</y></pt></polygon></object><object><name>water sea</name><deleted>0</deleted><verified>0</verified><date>31-Mar-2006 03:33:21</date><polygon><username>anonymous</username><pt><x>0</x><y>111</y></pt><pt><x>34</x><y>109</y></pt><pt><x>253</x><y>107</y></pt><pt><x>256</x><y>108</y></pt><pt><x>255</x><y>188</y></pt><pt><x>248</x><y>191</y></pt><pt><x>199</x><y>194</y></pt><pt><x>154</x><y>194</y></pt><pt><x>128</x><y>193</y></pt><pt><x>91</x><y>197</y></pt><pt><x>43</x><y>194</y></pt><pt><x>15</x><y>198</y></pt><pt><x>3</x><y>198</y></pt><pt><x>0</x><y>197</y></pt></polygon></object><object><name>person standing kid</name><deleted>0</deleted><verified>0</verified><date>31-Mar-2006 03:33:21</date><polygon><username>anonymous</username><pt><x>182</x><y>191</y></pt><pt><x>186</x><y>184</y></pt><pt><x>184</x><y>174</y></pt><pt><x>187</x><y>178</y></pt><pt><x>188</x><y>176</y></pt><pt><x>183</x><y>163</y></pt><pt><x>180</x><y>161</y></pt><pt><x>181</x><y>155</y></pt><pt><x>178</x><y>154</y></pt><pt><x>173</x><y>156</y></pt><pt><x>171</x><y>163</y></pt><pt><x>165</x><y>173</y></pt><pt><x>167</x><y>174</y></pt><pt><x>171</x><y>169</y></pt><pt><x>172</x><y>174</y></pt><pt><x>173</x><y>181</y></pt><pt><x>174</x><y>187</y></pt><pt><x>173</x><y>196</y></pt><pt><x>177</x><y>196</y></pt><pt><x>183</x><y>194</y></pt></polygon></object></annotation>

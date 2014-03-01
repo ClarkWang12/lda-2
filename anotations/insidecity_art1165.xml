@@ -1,0 +1,16 @@
+<annotation>
+<filename>
+insidecity_art1165.jpg
+</filename>
+<folder>
+spatial_envelope_256x256_static_8outdoorcategories
+</folder>
+<source>
+<sourceImage>
+Aude Oliva and Antonio Torralba, IJCV 2001, vol 42(3).
+</sourceImage>
+<sourceAnnotation>
+LabelMe Webtool
+</sourceAnnotation>
+</source>
+<object><name>door</name><deleted>0</deleted><verified>0</verified><date>08-Mar-2006 04:26:40</date><polygon><username>anonymous</username><pt><x>40</x><y>37</y></pt><pt><x>102</x><y>38</y></pt><pt><x>102</x><y>215</y></pt><pt><x>42</x><y>217</y></pt></polygon></object><object><name>door</name><deleted>0</deleted><verified>0</verified><date>08-Mar-2006 04:26:40</date><polygon><username>anonymous</username><pt><x>158</x><y>64</y></pt><pt><x>213</x><y>65</y></pt><pt><x>212</x><y>219</y></pt><pt><x>157</x><y>220</y></pt></polygon></object><object><name>building</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:58</date><polygon><username>anonymous</username><pt><x>0</x><y>239</y></pt><pt><x>256</x><y>233</y></pt><pt><x>255</x><y>0</y></pt><pt><x>0</x><y>0</y></pt></polygon></object><object><name>sidewalk</name><deleted>0</deleted><verified>0</verified><date>13-Jun-2006 02:56:58</date><polygon><username>anonymous</username><pt><x>0</x><y>256</y></pt><pt><x>255</x><y>256</y></pt><pt><x>255</x><y>235</y></pt><pt><x>2</x><y>239</y></pt><pt><x>0</x><y>240</y></pt></polygon></object></annotation>
