@@ -1,5 +1,6 @@
 import cv2, numpy, sys, logging
 from gensim import corpora, models, similarities
+from collections import Counter
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 if len(sys.argv)!=2:
     print 'Need input image'
@@ -30,11 +31,11 @@ for k in kp:
             distance.append(numpy.linalg.norm(c-patch))
         test.append(distance.index(min(distance)))
          
-map(str, test)
-#TODO: change type of test to string
+test=map(str, test)
+
 #begin testing   
 ############################
-''''
+
 info=open('label.txt')
 label=list()
 for line in info:
@@ -46,8 +47,9 @@ dictionary=corpora.Dictionary.load('dictionary.dict')
 #load corpus
 corpus=corpora.MmCorpus('corpus.mm')
 #build lda model
-lda=models.LdaModel(corpus, id2word=dictionary, num_topics=100)
-
+#lda=models.LdaModel(corpus, id2word=dictionary, num_topics=100)
+#lda.save('model.lda')
+lda=models.LdaModel.load('model.lda')
 #convert test document
 bow=dictionary.doc2bow(test)
 vec=lda[bow]
@@ -67,4 +69,3 @@ for s in sims:
 #print simsLabel
 counts=Counter(simsLabel)
 print counts.most_common()
-'''

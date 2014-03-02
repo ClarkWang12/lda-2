@@ -43,6 +43,7 @@ numpy.savetxt('kmeans_label.txt', l)
 files=glob.glob('images/*.jpg')
 count=0
 #data=list()
+#training data are put in train.txt
 train=open('train.txt', 'w+')
 for file in files:
     print file
