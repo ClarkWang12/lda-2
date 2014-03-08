@@ -68,4 +68,12 @@ for s in sims:
         
 #print simsLabel
 counts=Counter(simsLabel)
-print counts.most_common()
+print counts.most_common(1)[0]
+
+
+
+#image classification
+#text and sift; accuracy
+#without lda comparison 
+#measure; baseline
+#kp+annotation

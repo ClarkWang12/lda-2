@@ -6,7 +6,7 @@ label=open('label.txt', 'w+')
 for img in images:
     name=img.split('/')[1].strip('.jpg')
     print '--------------'+name+'-----------------------'
-    ant='anotations/'+name+".xml"
+    ant='annotations/'+name+".xml"
     tree=parse(ant)
     nodes=tree.getElementsByTagName('name')
     text=str()
