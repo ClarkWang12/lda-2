@@ -1,6 +1,7 @@
 import cv2, numpy, sys, logging
 from gensim import corpora, models, similarities
 from collections import Counter
+from numpy.random import multinomial
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 if len(sys.argv)!=2:
     print 'Need input image'
@@ -36,20 +37,17 @@ test=map(str, test)
 #begin testing   
 ############################
 
-info=open('label.txt')
-label=list()
-for line in info:
-    label.append(line.strip())
-
+label=[line.strip() for line in open('label1.txt')]
+annotations=[line.strip().split(',') for line in open('annotations1.txt')]
 
 #load dictionary
-dictionary=corpora.Dictionary.load('dictionary.dict')
+dictionary=corpora.Dictionary.load('dictionary_with_ann.dict')
 #load corpus
-corpus=corpora.MmCorpus('corpus.mm')
+corpus=corpora.MmCorpus('corpus_with_ann.mm')
 #build lda model
 #lda=models.LdaModel(corpus, id2word=dictionary, num_topics=100)
 #lda.save('model.lda')
-lda=models.LdaModel.load('model.lda')
+lda=models.LdaModel.load('model_with_ann.lda')
 #convert test document
 bow=dictionary.doc2bow(test)
 vec=lda[bow]
@@ -58,19 +56,39 @@ index=similarities.MatrixSimilarity(lda[corpus])
 sims=index[vec]
 #sims is (document_number, document_similarity) 2-tuples
 #sort based on similarities
-simsLabel=list()
+
 sims=sorted(enumerate(sims), key=lambda item: -item[1])
+
+
+simsLabel=list()
 for s in sims:
-    if s[1]<0.5:
-        break
-    else:
+    if s[1]>0.5:
         simsLabel.append(label[s[0]])
+    if len(simsLabel)>=20:
+        break
+print simsLabel
         
 #print simsLabel
 counts=Counter(simsLabel)
-print counts.most_common(1)[0]
-
-
+topic=counts.most_common(1)[0][0]
+num=counts.most_common(1)[0][1]
+print topic
+''''
+anns=list()
+sz=0
+for s in sims:
+    if s[1]<0.5:
+        break
+    elif label[s[0]]==topic:
+        for a in annotations[s[0]]:
+            anns.append(a)
+            sz+=len(a)
+sz/=len(anns)
+l=float(len(anns))
+dist=multinomial(sz, [1/l]*int(l))
+a=[anns[i]*dist[i] for i in range(len(anns)) if dist[i]!=0]
+print a
+'''
 
 #image classification
 #text and sift; accuracy

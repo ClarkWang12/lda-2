@@ -1,0 +1,23 @@
+split data into 75% training and 25% testing
+generate model_with_ann and model_without_ann
+batch test for each model
+
+
+
+
+
+annotations lda:
+------------
+('mountain', [28, 67])
+('street', [24, 48])
+('opencountry', [12, 82])
+('coast', [46, 51])
+('insidecity', [78, 6])
+('forest', [49, 23])
+('tallbuilding', [24, 51])
+('highway', [25, 35])
+----------
+('city', [173, 58])
+('outside', [165, 96])
+('highway', [25, 35])
+('coast', [46, 51])

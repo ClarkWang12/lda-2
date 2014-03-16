@@ -1,17 +1,26 @@
-import cv2, glob, numpy
+import cv2, glob, numpy, shutil
 from scipy.cluster.vq import *
+from random import random
 files=glob.glob('images/*.jpg')
-labelFile=open('label.txt')
-labels=dict()
+
+
 patches=list()
 count=0
-for line in labelFile:
-    if line.strip() not in labels.keys():
-        labels[line.strip()]=len(labels.keys())+1
-    count+=1
-print count
+labels=[line.strip() for line in open('label.txt')]
+ann=[line.strip().split(',') for line in open('annotations.txt')]
+
+count=0
 sz=list()
+filelist=list()
 for file in files:
+    rd=random()
+    if rd>0.75:
+        labels.pop(count)
+        ann.pop(count)
+        filename=file.split('/')[len(file.split('/'))-1]
+        shutil.move(file, 'test/'+filename)
+        continue
+    filelist.append(file)
     img=cv2.imread(file, 0)
     #img = cv2.imread('template.jpg', 0)
 
@@ -32,6 +41,19 @@ for file in files:
             patch=patch.reshape(1, n*m)
             patches.append(patch[0])
         sz.append(len(kp))
+    count+=1
+#save labels and ann
+f=open('label1.txt', 'w+')
+for e in labels:
+    f.write(str(e)+'\n')
+f.close()
+f=open('annotations1.txt', 'w+')
+for a in ann:
+    for e in a:
+        f.write(str(e)+'\n')
+    f.write('\n')
+f.close()
+
 
 patches=numpy.array(patches)
 print patches.shape
@@ -40,12 +62,12 @@ centroid, l=kmeans2(numpy.array(patches), 260)
 print len(centroid)
 numpy.savetxt('centroid.txt', centroid)
 numpy.savetxt('kmeans_label.txt', l)
-files=glob.glob('images/*.jpg')
+
 count=0
 #data=list()
 #training data are put in train.txt
 train=open('train.txt', 'w+')
-for file in files:
+for file in filelist:
     print file
     img=cv2.imread(file, 0)
     sift=cv2.SIFT()
@@ -68,3 +90,4 @@ for file in files:
     for e in d:
         train.write(str(e)+',')
     train.write('\n')
+train.close()
